@@ -6,7 +6,16 @@ import (
 )
 
 func main() {
-	fmt.Println(robMoney(2, 7, 9, 3, 1))
+	var problemStatement = ` - House Robber Assignment
+	Given a list of non-negative integers nums representing the amount of money of each house, 
+	return the maximum amount of money you can rob tonight without alerting the police.
+	
+	Input: %v
+	Output: %d
+	`
+	inputArray := []uint{2, 7, 9, 3, 1}
+	output := robMoney(inputArray...)
+	fmt.Printf(problemStatement, inputArray, output)
 }
 
 func robMoney(houses ...uint) uint {
